@@ -8,21 +8,42 @@
     <script src="socket.io/socket.io.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="script.js"></script>
-    <title>Cricket Feeds</title>
+    <title>Cricket Score</title>
 </head>
 <body>
-    <div class="jumbotron">
-        <div class="container">
-            <h1></h1>
-            <div id="data">
-                <p id="para1"></p>
-                <p id="para2"></p>
-                <div class="card" style="width: 18rem;">
-                    <ul class="list-group cric list-group-flush">
-                        <li class="list-group-item">Live Score</li>
-                    </ul>
+    <div class="container">
+        <div class="jumbotron" style="background-color: rgb(133, 7, 252); color:rgb(246, 248, 120)">
+            <div class="container">
+                <h1 class="series" style="font-size: 3.4rem"></h1>
+                <h1 class="teams"></h1>
+                <br>
+                <div id="data">
+                    <p id="para1"></p>
                 </div>
             </div>
+        </div>
+        <div class="container">
+            <p id="para2" style="font-weight: bold; font-size: 1.4rem"></p>
+            <div class="card" style="width: 28rem;">
+                <ul class="list-group cric list-group-flush">
+                    <li class="list-group-item" style="font-size: 2rem; background: rgb(0, 255, 157)">Live Score</li>
+                </ul>
+            </div>
+            <br>
+            <hr>
+            <div class="card" style="width: 28rem;">
+                <ul class="list-group bat list-group-flush">
+                    <li class="list-group-item" style="font-size: 2rem; background: rgb(0, 255, 157)">Batsmen : </li>
+                </ul>
+            </div>
+            <br>
+            <hr>
+            <div class="card" style="width: 28rem;">
+                <ul class="list-group ball list-group-flush">
+                    <li class="list-group-item" style="font-size: 2rem; background: rgb(0, 255, 157)">Bowlers : </li>
+                </ul>
+            </div>
+            <br>
         </div>
     </div>
 </body>
