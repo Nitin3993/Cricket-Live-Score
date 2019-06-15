@@ -8,21 +8,21 @@ const server = http.Server(app);
 
 app.use('/', express.static(__dirname + '/public'))
 
-// cricApi.getRecentMatches().then(function(matches){
-//   console.log('matches',matches)
-// }).catch(function(err){
-//   console.log('Error',err)
-// })
+cricApi.getRecentMatches().then(function(matches){
+  console.log('matches',matches)
+}).catch(function(err){
+  console.log('Error',err)
+})
 
 let liveScore1 = {}
 
-// setInterval(() => {
+setInterval(() => {
     cricApi.getLiveScore(20256)
       .then( (liveScore) => {
         liveScore1 = liveScore
     })
       .catch(console.error) 
-// }, 1000);   
+}, 1000);   
 
 const io = socketio(server)
 
@@ -35,3 +35,4 @@ io.on('connection', (socket) => {
 server.listen('2349', () => {
     console.log('http://localhost:2349')
 })
+

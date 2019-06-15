@@ -6,6 +6,7 @@ socket.on('connect',()=>{
 
 socket.on('match', (data)=>{    
     console.log(data.Current)
+
     $('.series').text(data.Current.series)
     $('.teams').text(`${data.Current.teams['4'].name} vs ${data.Current.teams['5'].name} `)
     $('#para1').text(`State : ${data.Current.state}`)
